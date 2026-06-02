@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>EcoPorto Camargo | Observatório Sustentável</title>
+
+  <link rel="stylesheet" href="./css/styles.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+</head>
+
+<body>
+  <header class="topo">
+    <div class="container topo-conteudo">
+      <a href="#inicio" class="marca">
+        <img
+          src="./assets/logo-escola.png"
+          alt="Logo da escola"
+          class="logo-escola"
+        />
+
+        <div>
+          <span class="marca-nome">EcoPorto Camargo</span>
+          <small>Observatório Sustentável do Rio Paraná</small>
+        </div>
+      </a>
+
+      <nav class="menu">
+        <a href="#sobre">Sobre</a>
+        <a href="#video">Vídeo</a>
+        <a href="#dashboard">Indicadores</a>
+        <a href="#registrar">Registrar</a>
+        <a href="#galeria">Galeria</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero">
+      <div class="hero-filtro"></div>
+
+      <div class="container hero-conteudo">
+        <div class="hero-texto">
+          <span class="etiqueta">Porto Camargo • Icaraíma • Rio Paraná</span>
+
+          <h1>
+            Tecnologia, comunidade e sustentabilidade para cuidar do
+            <strong>Rio Paraná</strong>
+          </h1>
+
+          <p>
+            Uma plataforma criada para valorizar Porto Camargo, registrar
+            observações ambientais e mostrar que o agro, o turismo e a
+            preservação podem caminhar juntos.
+          </p>
+
+          <div class="hero-botoes">
+            <a href="#registrar" class="botao botao-principal">
+              Registrar observação
+            </a>
+
+            <a href="#dashboard" class="botao botao-secundario">
+              Ver indicadores
+            </a>
+          </div>
+        </div>
+
+        <div class="cartao-hero">
+          <p class="cartao-label">Tema do projeto</p>
+
+          <h2>Agro forte, futuro sustentável</h2>
+
+          <p>
+            Equilíbrio entre produção, turismo, água limpa, mata ciliar e
+            biodiversidade.
+          </p>
+
+          <div class="mini-indicadores">
+            <div>
+              <strong>Rio</strong>
+              <span>Paraná</span>
+            </div>
+
+            <div>
+              <strong>Local</strong>
+              <span>Porto Camargo</span>
+            </div>
+
+            <div>
+              <strong>Foco</strong>
+              <span>Sustentabilidade</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre" class="secao">
+      <div class="container grid-sobre">
+        <div>
+          <span class="etiqueta verde">Sobre o projeto</span>
+
+          <h2>Um observatório digital feito para olhar Porto Camargo com cuidado</h2>
+
+          <p>
+            O EcoPorto Camargo é uma página com backend que permite cadastrar
+            informações sobre pontos positivos, alertas ambientais, turismo
+            consciente e boas práticas sustentáveis ligadas ao Rio Paraná.
+          </p>
+
+          <p>
+            A proposta é unir tecnologia e realidade local, usando fotos,
+            registros e informações da própria comunidade para mostrar que
+            proteger o ambiente também é pensar no futuro da produção, do
+            turismo e da qualidade de vida.
+          </p>
+        </div>
+
+        <div class="bloco-destaque">
+          <h3>O que o sistema faz?</h3>
+
+          <ul>
+            <li>Registra observações sobre Porto Camargo.</li>
+            <li>Organiza dados ambientais em um painel.</li>
+            <li>Calcula o Índice EcoPorto.</li>
+            <li>Valoriza fotos e registros locais.</li>
+            <li>Relaciona agro, turismo e preservação.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="video" class="secao video-secao">
+      <div class="container">
+        <div class="titulo-secao">
+          <span class="etiqueta azul">Passeio pelo Rio Paraná</span>
+
+          <h2>Vídeo de Porto Camargo</h2>
+
+          <p>
+            Este espaço foi pensado para mostrar o vídeo do passeio de barco
+            pelo Rio Paraná, reforçando a beleza e a importância do lugar.
+          </p>
+        </div>
+
+        <div class="video-card">
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/JuAWRMlHZO0?si=kSRmClMm1h9Bvlsb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="secao painel">
+      <div class="container">
+        <div class="titulo-secao">
+          <span class="etiqueta verde">Painel ambiental</span>
+
+          <h2>Indicadores do EcoPorto</h2>
+
+          <p>
+            Os dados abaixo são calculados automaticamente com base nos
+            registros cadastrados no sistema.
+          </p>
+        </div>
+
+        <div class="cards-indicadores">
+          <article class="card-indicador">
+            <span>Total de registros</span>
+            <strong id="totalRegistros">0</strong>
+          </article>
+
+          <article class="card-indicador">
+            <span>Registros positivos</span>
+            <strong id="registrosPositivos">0</strong>
+          </article>
+
+          <article class="card-indicador alerta">
+            <span>Alertas ambientais</span>
+            <strong id="alertasAmbientais">0</strong>
+          </article>
+
+          <article class="card-indicador indice">
+            <span>Índice EcoPorto</span>
+            <strong id="indiceEcoPorto">0</strong>
+          </article>
+        </div>
+
+        <div class="classificacao">
+          <p>Situação atual:</p>
+          <strong id="classificacaoEcoPorto">Carregando...</strong>
+        </div>
+      </div>
+    </section>
+
+    <section id="registrar" class="secao">
+      <div class="container grid-formulario">
+        <div>
+          <span class="etiqueta azul">Participação</span>
+
+          <h2>Registrar uma observação</h2>
+
+          <p>
+            Cadastre um ponto observado em Porto Camargo. Pode ser algo positivo,
+            como água limpa ou mata preservada, ou um alerta, como lixo em uma
+            área próxima ao rio.
+          </p>
+
+          <div class="aviso">
+            <strong>Dica:</strong>
+            use descrições reais, simples e respeitosas. Isso deixa o projeto
+            mais verdadeiro e mais forte na apresentação.
+          </div>
+        </div>
+
+        <section class="estatisticas-section">
+  <h2>📊 Painel Agrinho de Estatísticas</h2>
+  <p class="descricao-estatisticas">
+    Acompanhe os registros feitos sobre o campo, o meio ambiente e a sustentabilidade.
+  </p>
+
+  <div class="cards-estatisticas">
+    <div class="card-estatistica">
+      <span class="icone-card">🌱</span>
+      <h3 id="totalRegistros">0</h3>
+      <p>Total de Registros</p>
+    </div>
+
+    <div class="card-estatistica">
+      <span class="icone-card">🌾</span>
+      <h3 id="totalAgricultura">0</h3>
+      <p>Agricultura e Campo</p>
+    </div>
+
+    <div class="card-estatistica">
+      <span class="icone-card">💧</span>
+      <h3 id="totalAgua">0</h3>
+      <p>Água e Natureza</p>
+    </div>
+
+    <div class="card-estatistica">
+      <span class="icone-card">♻️</span>
+      <h3 id="totalSustentabilidade">0</h3>
+      <p>Sustentabilidade</p>
+    </div>
+  </div>
+</section>
+
+        <form id="formObservacao" class="formulario">
+          <label>
+            Título da observação
+            <input
+              type="text"
+              name="titulo"
+              placeholder="Ex: Margem próxima ao Rio Paraná"
+              required
+            />
+          </label>
+
+          <label>
+            Tipo de observação
+            <select name="tipo" required>
+              <option value="">Selecione</option>
+              <option value="Água limpa">Água limpa</option>
+              <option value="Mata ciliar preservada">Mata ciliar preservada</option>
+              <option value="Boa prática sustentável">Boa prática sustentável</option>
+              <option value="Agro sustentável">Agro sustentável</option>
+              <option value="Ponto turístico organizado">Ponto turístico organizado</option>
+              <option value="Educação ambiental">Educação ambiental</option>
+              <option value="Lixo encontrado">Lixo encontrado</option>
+              <option value="Área que precisa de cuidado">Área que precisa de cuidado</option>
+              <option value="Risco ambiental">Risco ambiental</option>
+            </select>
+          </label>
+
+          <label>
+            Nível de cuidado
+            <select name="nivel_cuidado" required>
+              <option value="">Selecione</option>
+              <option value="Baixo">Baixo</option>
+              <option value="Médio">Médio</option>
+              <option value="Alto">Alto</option>
+              <option value="Urgente">Urgente</option>
+            </select>
+          </label>
+
+          <label>
+            Localização
+            <input
+              type="text"
+              name="localizacao"
+              value="Porto Camargo - Icaraíma"
+              required
+            />
+          </label>
+
+          <label>
+            Responsável pelo registro
+            <input
+              type="text"
+              name="responsavel"
+              placeholder="Ex:  João"
+            />
+          </label>
+
+          <label class="campo-completo">
+            Descrição
+            <textarea
+              name="descricao"
+              rows="5"
+              placeholder="Descreva o que foi observado..."
+              required>
+            </textarea>
+          </label>
+
+          <button type="submit" class="botao botao-principal campo-completo">
+            Salvar observação
+          </button>
+
+          <p id="mensagemFormulario" class="mensagem-formulario"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="secao registros-secao">
+      <div class="container">
+        <div class="titulo-secao">
+          <span class="etiqueta verde">Registros salvos</span>
+
+          <h2>Observações cadastradas</h2>
+
+          <p>
+            Aqui aparecem as informações salvas no banco de dados do projeto.
+          </p>
+        </div>
+
+        <div id="listaObservacoes" class="lista-observacoes">
+          <p class="vazio">Carregando registros...</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="secao galeria-secao">
+      <div class="container">
+        <div class="titulo-secao">
+          <span class="etiqueta azul">Fotos autorais</span>
+
+          <h2>Galeria de Porto Camargo</h2>
+
+          <p>
+            
+          </p>
+        </div>
+
+        <div class="galeria">
+          <img src="assets/porto-1.jpg" alt="Foto de Porto Camargo 1" />
+          <img src="assets/porto-2.jpg" alt="Foto de Porto Camargo 2" />
+          <img src="assets/porto-3.jpg" alt="Foto de Porto Camargo 3" />
+          <img src="assets/porto-4.jpg" alt="Foto de Porto Camargo 4" />
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <div class="container rodape-conteudo">
+      <div>
+        <strong>EcoPorto Camargo</strong>
+        <p>
+          Projeto educativo sobre sustentabilidade, Rio Paraná, turismo
+          consciente e agro responsável.
+        </p>
+      </div>
+
+      <p>
+        Desenvolvido para valorizar Porto Camargo - Icaraíma.
+      </p>
+    </div>
+  </footer>
+
+  <script src="./js/app.js"></script>
+</body>
+</html>
