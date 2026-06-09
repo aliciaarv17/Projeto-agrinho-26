@@ -89,7 +89,7 @@ O Agrinho incentiva os estudantes a pensarem em soluções para problemas reais.
 
 O projeto mostra que pequenas atitudes podem fazer diferença, como não jogar lixo no rio, cuidar das margens, preservar a mata ciliar e respeitar os espaços naturais.
 
-Além disso, o site também mostra como a tecnologia pode ser usada dentro da escola para aprender mais sobre o lugar onde vivemos.
+Além disso, o site também mostra como a tecnologia pode ser usada dentro da escola para aprender mais sobre o lugar onde vivemos e observar mais os nossos recursos naturais.
 
 ---
 
