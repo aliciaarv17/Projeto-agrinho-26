@@ -111,8 +111,7 @@
           <h2>Um observatório digital feito para olhar Porto Camargo com cuidado</h2>
 
           <p>
-            O EcoPorto Camargo é uma página com backend que permite cadastrar
-            informações sobre pontos positivos, alertas ambientais, turismo
+            O EcoPorto Camargo é uma página uma plataforma digital que permite registrar informaçôes sobre pontos positivos, alertas ambientais, turismo
             consciente e boas práticas sustentáveis ligadas ao Rio Paraná.
           </p>
 
@@ -201,123 +200,107 @@
     </section>
 
     <section id="registrar" class="secao">
-      <div class="container grid-formulario">
-        <div>
-          <span class="etiqueta azul">Participação</span>
+  <div class="container grid-formulario">
 
-          <h2>Registrar uma observação</h2>
+    <div>
+      <span class="etiqueta azul">Participação</span>
 
-          <p>
-            Cadastre um ponto observado em Porto Camargo. Pode ser algo positivo,
-            como água limpa ou mata preservada, ou um alerta, como lixo em uma
-            área próxima ao rio.
-          </p>
+      <h2>Registrar uma observação</h2>
 
-          <div class="aviso">
-            <strong>Dica:</strong>
-            use descrições reais, simples e respeitosas. Isso deixa o projeto
-            mais verdadeiro e mais forte na apresentação.
-          </div>
-        </div>
+      <p>
+        Cadastre um ponto observado em Porto Camargo. Pode ser algo positivo,
+        como água limpa ou mata preservada, ou um alerta, como lixo em uma
+        área próxima ao rio.
+      </p>
 
-        <section class="estatisticas-section">
-  <h2>📊 Painel Agrinho de Estatísticas</h2>
-  <p class="descricao-estatisticas">
-    Acompanhe os registros feitos sobre o campo, o meio ambiente e a sustentabilidade.
-  </p>
-
-  <div class="cards-estatisticas">
-    <div class="card-estatistica">
-      <span class="icone-card">🌱</span>
-      <h3 id="totalRegistros">0</h3>
-      <p>Total de Registros</p>
+      <div class="aviso">
+        <strong>Dica:</strong>
+        use descrições reais, simples e respeitosas. Isso deixa o projeto
+        mais verdadeiro e mais forte na apresentação.
+      </div>
     </div>
 
-    <div class="card-estatistica">
-      <span class="icone-card">🌾</span>
-      <h3 id="totalAgricultura">0</h3>
-      <p>Agricultura e Campo</p>
-    </div>
+    <form id="formObservacao" class="formulario">
 
-    <div class="card-estatistica">
-      <span class="icone-card">💧</span>
-      <h3 id="totalAgua">0</h3>
-      <p>Água e Natureza</p>
-    </div>
+      <label>
+        Título da observação
+        <input
+          type="text"
+          name="titulo"
+          placeholder="Ex: Margem próxima ao Rio Paraná"
+          required
+        />
+      </label>
 
-    <div class="card-estatistica">
-      <span class="icone-card">♻️</span>
-      <h3 id="totalSustentabilidade">0</h3>
-      <p>Sustentabilidade</p>
-    </div>
+      <label>
+        Tipo de observação
+        <select name="tipo" required>
+          <option value="">Selecione</option>
+          <option value="Água limpa">Água limpa</option>
+          <option value="Mata ciliar preservada">Mata ciliar preservada</option>
+          <option value="Boa prática sustentável">Boa prática sustentável</option>
+          <option value="Agro sustentável">Agro sustentável</option>
+          <option value="Ponto turístico organizado">Ponto turístico organizado</option>
+          <option value="Educação ambiental">Educação ambiental</option>
+          <option value="Lixo encontrado">Lixo encontrado</option>
+          <option value="Área que precisa de cuidado">Área que precisa de cuidado</option>
+          <option value="Risco ambiental">Risco ambiental</option>
+        </select>
+      </label>
+
+      <label>
+        Nível de cuidado
+        <select name="nivel_cuidado" required>
+          <option value="">Selecione</option>
+          <option value="Baixo">Baixo</option>
+          <option value="Médio">Médio</option>
+          <option value="Alto">Alto</option>
+          <option value="Urgente">Urgente</option>
+        </select>
+      </label>
+
+      <label>
+        Localização
+        <input
+          type="text"
+          name="localizacao"
+          value="Porto Camargo - Icaraíma"
+          required
+        />
+      </label>
+
+      <label>
+        Responsável pelo registro
+        <input
+          type="text"
+          name="responsavel"
+          placeholder="Ex: João"
+        />
+      </label>
+
+      <label class="campo-completo">
+        Descrição
+        <textarea
+          name="descricao"
+          rows="5"
+          placeholder="Descreva o que foi observado..."
+          required
+        ></textarea>
+      </label>
+
+      <button
+        type="submit"
+        class="botao botao-principal campo-completo"
+      >
+        Salvar observação
+      </button>
+
+      <p id="mensagemFormulario" class="mensagem-formulario"></p>
+
+    </form>
+
   </div>
 </section>
-
-
-          <label>
-            Tipo de observação
-            <select name="tipo" required>
-              <option value="">Selecione</option>
-              <option value="Água limpa">Água limpa</option>
-              <option value="Mata ciliar preservada">Mata ciliar preservada</option>
-              <option value="Boa prática sustentável">Boa prática sustentável</option>
-              <option value="Agro sustentável">Agro sustentável</option>
-              <option value="Ponto turístico organizado">Ponto turístico organizado</option>
-              <option value="Educação ambiental">Educação ambiental</option>
-              <option value="Lixo encontrado">Lixo encontrado</option>
-              <option value="Área que precisa de cuidado">Área que precisa de cuidado</option>
-              <option value="Risco ambiental">Risco ambiental</option>
-            </select>
-          </label>
-
-          <label>
-            Nível de cuidado
-            <select name="nivel_cuidado" required>
-              <option value="">Selecione</option>
-              <option value="Baixo">Baixo</option>
-              <option value="Médio">Médio</option>
-              <option value="Alto">Alto</option>
-              <option value="Urgente">Urgente</option>
-            </select>
-          </label>
-
-          <label>
-            Localização
-            <input
-              type="text"
-              name="localizacao"
-              value="Porto Camargo - Icaraíma"
-              required
-            />
-          </label>
-
-          <label>
-            Responsável pelo registro
-            <input
-              type="text"
-              name="responsavel"
-              placeholder="Ex:  João"
-            />
-          </label>
-
-          <label class="campo-completo">
-            Descrição
-            <textarea
-              name="descricao"
-              rows="5"
-              placeholder="Descreva o que foi observado..."
-              required>
-            </textarea>
-          </label>
-
-          <button type="submit" class="botao botao-principal campo-completo">
-            Salvar observação
-          </button>
-
-          <p id="mensagemFormulario" class="mensagem-formulario"></p>
-        </form>
-      </div>
-    </section>
 
     <section class="secao registros-secao">
       <div class="container">
@@ -327,7 +310,8 @@
           <h2>Observações cadastradas</h2>
 
           <p>
-            Aqui aparecem as informações salvas no banco de dados do projeto.
+            <p>
+  Aqui aparecem as observações cadastradas no sistema.
           </p>
         </div>
 
