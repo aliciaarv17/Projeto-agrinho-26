@@ -1,3 +1,27 @@
+import { db } from "./firebase.js";
+
+import {
+  collection,
+  addDoc,
+  getDocs
+} from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+
+async function carregarFirestore() {
+  const snapshot = await getDocs(
+    collection(db, "observacoes")
+  );
+
+  observacoes.length = 0;
+
+  snapshot.forEach((doc) => {
+    observacoes.push(doc.data());
+  });
+
+ carregarFirestore();
+}
+
+ from "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js";
+
 const mensagemFormulario = document.querySelector("#mensagemFormulario");
 const listaObservacoes = document.querySelector("#listaObservacoes");
 
@@ -8,7 +32,7 @@ const indiceEcoPorto = document.querySelector("#indiceEcoPorto");
 const classificacaoEcoPorto = document.querySelector("#classificacaoEcoPorto");
 
 function formatarData(data) {
-  return new Date(data).toLocaleDateString("pt-BR", {
+  return new Date(data).toLocaleDateString("pt-BR", { 
     day: "2-digit",
     month: "2-digit",
     year: "numeric"
@@ -104,3 +128,36 @@ function carregarObservacoes() {
 
 carregarDashboard();
 carregarObservacoes();
+
+const formulario = document.getElementById("formObservacao");
+
+formulario.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  const dados = new FormData(formulario);
+
+  try {
+    await addDoc(collection(db, "observacoes"), {
+      titulo: dados.get("titulo"),
+      tipo: dados.get("tipo"),
+      nivel_cuidado: dados.get("nivel_cuidado"),
+      localizacao: dados.get("localizacao"),
+      responsavel: dados.get("responsavel"),
+      descricao: dados.get("descricao"),
+      data_registro: new Date()
+    });
+
+    mensagemFormulario.textContent =
+      "Observação salva com sucesso!";
+
+    formulario.reset();
+    await carregarFirestore();
+    
+  } catch (erro) {
+    console.error(erro);
+
+    mensagemFormulario.textContent =
+      "Erro ao salvar observação.";
+  }
+});
+
