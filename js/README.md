@@ -101,7 +101,6 @@ Ele faz parte da paisagem do Rio Paraná e recebe visitantes que procuram lazer,
 
 Por isso, é importante cuidar desse espaço para que ele continue bonito, limpo e preservado para as próximas gerações.
 
----
 
 ## o que foi usado
 
@@ -110,24 +109,8 @@ Para criar o site, foram usadas tecnologias simples da programação web:
 - HTML
 - CSS
 - JavaScript
-- Node.js
-- Express
-- SQLite
+- e Banco de dados feito no FIREBASE
 
-Essas ferramentas ajudam o site a funcionar, guardar os registros ambientais e mostrar as informações para os usuários.
-
----
-
-## Como abrir o projeto no computador
-
-Primeiro, é necessário ter o Node.js instalado no computador.
-
-Depois, abra a pasta do projeto no VS Code e use o terminal.
-
-### Instalar as dependências
-
-```bash
-npm install
 
 
 Projeto realizado por: Alícia 
